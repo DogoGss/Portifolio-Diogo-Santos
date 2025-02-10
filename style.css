@@ -56,6 +56,9 @@ a:hover {
     font-size: 105%;
 }
 
+a:active {
+    font-size: 105%;
+}
 /*--------------------------Cabecalho---------------------------*/
 #cabecalho .cabeca {
     display: flex;
