@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Cora</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --cor01: #EBEDF2;
+            --cor02: #E0E0DB;
+            --cor03: #e4e4e0;
+            --cor04: #0C1011;
+            --cor05: #000e52;
+            --cor06: #2A2829;
+
+            --fonte-padrão: 
+        }
+        /*-----------------------Cabecalho---------------------------*/
+        #cabecalho .cabeca {
+            color: var(--cor04);
+        }
+
+        #cabecalho .cabeca.scrolled {
+            background-image: linear-gradient(to right, #e0e0dbe4, #e4e4e0e7);  
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            color: #09101085;
+        }
+
+        .cabeca > nav > p > a {
+            color: var(--cor04);
+            text-decoration: none;
+        }
+
+        .cabeca > p > a {
+            color: var(--cor04);
+            text-decoration: none;
+        }
+
+        .cabeca .esquerda > a {
+            color: var(--cor04);
+        }
+
+        /*-------------------------------------Introdução-----------------------------------*/
+        main{
+            margin-top: 100px;
+            text-align: center;
+        }
+        .introd {
+            display: flex;
+            text-align: center;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 100px;
+        }
+        .introd .introd__paragraph {
+            font-size: 1.5em;
+        }
+        /*--------------------------------------Galeria--------------------------------------*/
+        .galery .image-container1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            gap: 20px;
+            padding: 8px;
+        }
+
+        .galery .image-container1 img {
+            height: 300px;
+            width: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.297);
+        }
+
+    </style>
+    <script>
+        window.addEventListener('scroll', function() {
+        var cabeca = document.querySelector('.cabeca');
+        
+        if (window.scrollY > 100) { // Quando o scroll ultrapassar 50px
+            cabeca.classList.add('scrolled');
+        } else {
+            cabeca.classList.remove('scrolled');
+        }
+        window.onload = function() {
+            if (window.location.hash) {
+                window.location.hash = "cabecalho";
+            }
+        }
+    });
+    </script>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="cabeca">
+            <nav class="esquerda">
+                <p><a href="index.html#aboutme" target="_self">Quem sou eu</a></p>
+                <p><a href="index.html#contatos" target="_self">Contato</a></p>
+                <a href=""> <img src="images/icones/menu-hamburguer.png" alt=""></a>
+            </nav>
+            <p class="centro"><a href="index.html#cabecalho" target="_self" rel="header">DIOGO SANTOS | ENGENHEIRO EM CONTROLE E AUTOMAÇÃO</a></p>
+        </div>
+    </header>
+    <main>   
+        <section class="introd">
+            <h1 class="introd__title">
+                Cora (Competição de Robôs Autônomos)
+            </h1>
+            <span class="introd__paragraph">
+                A Cora foi uma competição realizada em um dos prédios da Engenharia na UFMG, a qual tinha o objetivo de de reunir equipes da UFMG e outras escolas de MG para realizar projetos de robôs seguidores de linha.
+            </span>
+        </section>
+    
+    
+        <section class="galery">
+            <div class="image-container1">
+                <img src="coltec-imagens/Cora/300/IMG-20230919-WA0014.jpg"alt="">
+                <img src="coltec-imagens/Cora/300/IMG-20230919-WA0014.jpg" alt="" class="thetwoteams">
+                <img src="coltec-imagens/Cora/300/IMG-20230922-WA0014.jpg" alt="" class="team">
+                <img src="coltec-imagens/Cora/300/20230601_171207.jpg" alt="">
+                <img src="coltec-imagens/Cora/300/20230601_171209.jpg" alt="">
+                <img src="coltec-imagens/Cora/300/20230622_135159.jpg" alt="">
+                <img src="coltec-imagens/Cora/300/20230918_131850.jpg" alt="">
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

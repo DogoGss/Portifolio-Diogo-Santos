@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diogo | Programmer</title>
+    <link rel="shortcut icon" href="images/icones/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Links para trazer os ícones via CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"/>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="cabeca">
+            <nav class="nav">
+                <p><a href="index.html#aboutme" target="_self">Quem sou eu</a></p>
+                <p><a href="index.html#contatos" target="_self">Contato</a></p>
+                <a href=""> <img src="images/icones/menu-hamburguer.png" alt=""></a>
+            </nav>
+            <p class="centro"><a href="index.html#cabecalho" target="_self" rel="header">DIOGO SANTOS | ENGENHEIRO EM CONTROLE E AUTOMAÇÃO</a></p>
+        </div>
+    </header>
+    <main>
+        <!--------------------tela inicial---------------------------->
+        <section id="home">
+            <div class="home__img"></div>
+            <div class="home__text">
+                <h1>DIOGO SANTOS</h1>
+                <p class="introd">  A automação tem sido essencial na transformação da indústria, impulsionando o desenvolvimento de processos e sistemas capazes de executar tarefas de forma autônoma. Combinando conhecimentos em eletrônica, elétrica, programação e mecânica, ela possibilita avanços contínuos no mundo da robótica, tornando os sistemas mais inteligentes, eficientes e integrados.</p>
+            </div>
+        </section>
+        <!-------------------Um pouco sobre mim---------------------->
+        <section id="aboutme">
+            <picture class="aboutme__img">
+                <source class="aboutme__img__telefone" media="(max-width: 650px)" srcset="images/layout_img/pro_img_550.jpg" type="image/jpg">
+                <source class="aboutme__img__tablet" media="(max-width: 1450px)" srcset="images/layout_img/pro_img_800.jpg" type="image/jpg">
+                <img src="images/layout_img/pro_img.jpeg" alt="">
+            </picture>
+            <div class="aboutme__text"> 
+                <h2>Quem sou eu?</h2>
+                <p>  Meu nome é <strong>Diogo Gonçalves Siqueira Santos</strong>. Sou aluno do curso de <a href="https://controle.eng.ufmg.br" target="_blank" rel="external" title="Eng de Controle e Automação | UFMG">Engenharia de Controle e Automação na UFMG</a> desde 2025 e, entre os anos de 2021 e 2023, cursei o <a href="https://www.coltec.ufmg.br/coltec-ufmg/?page_id=61" target="_blank" rel="external" title=" Automação Industrial no Colégio Técnico da UFMG">Ensino Técnico em Automação Industrial no Coltec</a></strong>.</p>
+                <p>Minha jornada acadêmica na área de robótica iniciou-se no 7º ano, quando entrei para a equipe SuperAção, com a qual conquistei troféus e participei da <a href="https://www.portaldaindustria.com.br" target="_blank" rel="external" title="First Lego League">competição nacional de robótica FLL</a>, em 2020. Posteriormente, durante minha formação no Coltec, participei de outro torneio, conhecido como <a href="http://cora.cpdee.ufmg.br" target="_blank" rel="external" title="Competição de Robôs Autônomos">Cora</a>, que integrou um projeto do estágio que realizei no 3º ano do Ensino Médio.</p>
+                
+                <p>Todo esse processo me permitiu adquirir conhecimentos em<em> C, C++, MATLAB, SQL, CSS, HTML, Ladder e Python</em>, além de proporcionar uma ampla aprendizagem nas áreas de eletrônica, elétrica e mecânica.</p>
+            </div>
+            
+        </section>
+        <!----------------- Meus projetos ---------------------->
+        <section id="projetos">
+            <h1>Meus Projetos</h1>
+            
+            <div class="tabs">
+                <button class="tab-button active" data-tab="desenvolvedor">Projetos como Desenvolvedor</button>
+                <button class="tab-button" data-tab="academico">Projetos Acadêmicos</button>
+            </div>
+
+            <!--- Conteúdo dos projetos --->
+            <div class="tab-content active" id="desenvolvedor">
+                <h2>Projetos Principais</h2>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <img src="projeto1.jpg" alt="Projeto 1">
+                        <p>Projeto 1 - Descrição breve</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="projeto2.jpg" alt="Projeto 2">
+                        <p>Projeto 2 - Descrição breve</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="projeto3.jpg" alt="Projeto 3">
+                        <p>Projeto 3 - Descrição breve</p>
+                    </div>
+                </div>
+
+                <!------- Mais projetos ------->
+                <div class="more-projects hidden">
+                    <h2>Mais Projetos</h2>
+                    <ul>
+                        <li>Projeto Adicional 1</li>
+                        <li>Projeto Adicional 2</li>
+                        <li>Projeto Adicional 3</li>
+                    </ul>
+                </div>
+                <button class="toggle-more">Ver mais projetos ↓</button>
+            </div>
+
+            <div class="tab-content" id="academico">
+                <h3>Projetos Acadêmicos</h3>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <img src="projeto-academico1.jpg" alt="Projeto Acadêmico 1">
+                        <p>Projeto Acadêmico 1 - Descrição breve</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="projeto-academico2.jpg" alt="Projeto Acadêmico 2">
+                        <p>Projeto Acadêmico 2 - Descrição breve</p>
+                    </div>
+                </div>
+
+                <!-- Mais projetos acadêmicos -->
+                <div class="more-projects hidden">
+                    <h4>Mais Projetos Acadêmicos</h4>
+                    <ul>
+                        <li>Projeto Acadêmico Adicional 1</li>
+                        <li>Projeto Acadêmico Adicional 2</li>
+                    </ul>
+                </div>
+                <button class="toggle-more">Ver mais projetos ↓</button>
+            </div>
+        </section>
+
+        <!----------------Minha trajetória-------------------->
+        <section id="trajectory">
+            <h1>Minha trajetória acadêmica</h1>
+            <section class="trajectory__gallery">
+                <div class="image-container">
+                    <a href="page002.html" id="fll"><img src="sesi-imagens/FLL_2020/Regional/Capa_FLL_300.jpg" alt="foto da semifinal da FLL-regional MG"></a>
+                </div>
+                <div class="image-container">
+                    <a href="page001.html" id="coltec"><img src="coltec-imagens/Cora/300/cora_host_300.jpg" alt="foto no Cora-Projeto de Ensino"></a>
+                </div>
+            </section>
+        </section>
+    </main>
+        
+    <footer id="contatos">
+        <div class="title"><h1><a href="index.html#cabecalho" target="_self">DIOGO SANTOS</a></h1></div>
+        <div class="contacts"><h2>Como falar comigo:</h2>
+            <p>
+                <li><a href="https://www.linkedin.com/in/diogo-santos-b58536260/" target="_blank" rel="external">Linkedin</a></li>
+                <li><a href="https://www.instagram.com/diogo.gss/" target="_blank" rel="external">Instagram</a></li>
+                <li><a href="https://br.pinterest.com/DogoGSS/" target="_blank" rel="external">Pinterest</a></li>
+                <li><a href="https://x.com/DogoGSS" target="_blank" rel="external">X</a></li>
+            </p>
+        </div>
+        <div class="explorer">
+            <h2>Explorar</h2>
+            <p>
+                <li><a href="" target="_self" rel="">Linkedin</a></li>
+                <li><a href="" target="_self" rel="">Linkedin</a></li>
+                <li><a href="" target="_self" rel="">Linkedin</a></li>
+                <li><a href="" target="_self" rel="">Linkedin</a></li>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+
+        // Manipulador de rolagem
+        window.addEventListener('scroll', function() {
+            var cabeca = document.querySelector('.cabeca');
+            if (window.scrollY > 100) { // Quando o scroll ultrapassar 100px
+                cabeca.classList.add('scrolled');
+            } else {
+                cabeca.classList.remove('scrolled');
+            }
+        });
+
+        // Manipulador de carregamento da página
+        window.onload = function() {
+            if (window.location.hash) {
+                window.location.hash = "cabecalho";
+            }
+        };
+        // Alternar entre as abas
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remover a classe 'active' de todos os botões e conteúdos
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+                // Adicionar a classe 'active' ao botão clicado e ao conteúdo correspondente
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Mostrar/ocultar mais projetos
+        document.querySelectorAll('.toggle-more').forEach(button => {
+            button.addEventListener('click', () => {
+                const moreProjects = button.previousElementSibling; // Encontra o elemento .more-projects
+                if (moreProjects.classList.contains('hidden')) {
+                    moreProjects.classList.remove('hidden');
+                    button.textContent = 'Ocultar projetos ↑';
+                } else {
+                    moreProjects.classList.add('hidden');
+                    button.textContent = 'Ver mais projetos ↓';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

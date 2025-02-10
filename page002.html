@@ -1,0 +1,96 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Cora</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .image-container1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .image-container1 img {
+            width: 300px; /* Corrigido para incluir a unidade 'px' */
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.297);
+        }
+        /*-----------------------Cabecalho---------------------------*/
+        #cabecalho .cabeca {
+            color: #091010;
+        }
+
+        #cabecalho .cabeca.scrolled {
+            background-image: linear-gradient(to right, #e0e0dbe4, #e4e4e0e7);  
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            color: #09101085;
+        }
+
+        .cabeca > nav > p > a {
+            color: #091010;
+            text-decoration: none;
+        }
+
+        .cabeca > p > a {
+            color: #091010;
+            text-decoration: none;
+        }
+
+    </style>
+    <script>
+        window.addEventListener('scroll', function() {
+            var cabeca = document.querySelector('.cabeca');
+            if (window.scrollY > 100) { // Quando o scroll ultrapassar 100px
+                cabeca.classList.add('scrolled');
+            } else {
+                cabeca.classList.remove('scrolled');
+            }
+        });
+
+        window.onload = function() {
+            if (window.location.hash) {
+                window.location.hash = "cabecalho";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header id="cabecalho">
+        <div class="cabeca">
+            <nav class="esquerda">
+                <p><a href="index.html#aboutme" target="_self">Quem sou eu</a></p>
+                <p><a href="index.html#contatos" target="_self">Contato</a></p>
+                <a href=""> <img src="images/icones/menu-hamburguer.png" alt=""></a>
+            </nav>
+            <p class="centro"><a href="index.html#cabecalho" target="_self" rel="header">DIOGO SANTOS | ENGENHEIRO EM CONTROLE E AUTOMAÇÃO</a></p>
+        </div>
+    </header>
+    <p>
+
+    </p>
+
+
+    <div class="image-container1">
+        <a href="coltec-imagens/Cora/300/20230919_143638.jpg" target="_self"><img src="coltec-imagens/Cora/300/20230919_143638.jpg" alt=""></a>
+        <img src="coltec-imagens/Cora/300/IMG-20230919-WA0014.jpg" alt="">
+        <img src="coltec-imagens/Cora/300/IMG-20230922-WA0014.jpg" alt="">
+        <img src="coltec-imagens/Cora/300/20230601_171207.jpg" alt="">
+        <img src="coltec-imagens/Cora/300/20230601_171209.jpg" alt="">
+        <img src="coltec-imagens/Cora/300/20230622_135159.jpg" alt="">
+        <img src="coltec-imagens/Cora/300/20230918_131850.jpg" alt="">
+    </div>
+
+
+    
+
+</body>
+</html>

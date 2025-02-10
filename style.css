@@ -1,0 +1,490 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+/*--------------- Configs do corpo do texto---------------- */
+/* Variables */
+:root {
+    --cor01: #EBEDF2;
+    --cor02: #E0E0DB;
+    --cor03: #e4e4e0;
+    --cor04: #0C1011;
+    --cor05: #000e52;
+    --cor06: #2A2829;
+    --fonte-padrão: "syne";
+}
+
+/* Config geral */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Config corpo */
+body {
+    color: var(--cor04); 
+    background-image: linear-gradient(to right, var(--cor02), var(--cor03)); 
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    color: var(--cor06);
+    font-size: 3.5em;
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+}
+
+a {
+    color: var(--cor05);
+    font-style: oblique;
+    text-decoration: none;
+    font-weight: 600;
+    transition: font-size 0.4s ease;
+}
+ul {
+    list-style-type: none;
+    text-align: left;    
+    padding: 2;            
+} 
+a:hover {
+    font-size: 105%;
+}
+
+/*--------------------------Cabecalho---------------------------*/
+#cabecalho .cabeca {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px 0px 5px;
+    font: normal 700 1.1em "syne";
+    color: var(--cor01);
+    position: relative;
+    position: fixed; 
+    background-color: transparent;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 9%;
+    z-index: 1000; 
+    transition: all 0.3s ease; 
+}
+
+#cabecalho .cabeca .centro {
+    text-align: center;
+    max-width: 400px;
+    padding: 5px 10px 0px 10px;
+    font-size: 1.1em;
+    margin: auto;
+}
+
+#cabecalho .cabeca .nav {
+    font-size: 1em;
+    display: flex;
+    gap: 27px;
+    position: absolute;
+    left: 10px;
+}
+
+#cabecalho .cabeca .nav > a {
+    display: none;
+}
+
+#cabecalho .cabeca.scrolled {
+    background-color: #09101085; 
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: var(--cor01);
+}
+
+@media (max-width: 900px) {
+    #cabecalho .cabeca .nav > p {
+        display: none;     
+    }
+    #cabecalho .cabeca .nav > a{
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    #cabecalho .cabeca .centro {
+        max-width: 290px;
+        font-size: 1em;
+    }
+}
+
+#cabecalho .cabeca .nav > p > a {
+    color: var(--cor01);
+}
+
+#cabecalho .cabeca > p > a {
+    color: var(--cor01);
+}
+
+/*-------------------Página Inicial-------------------- */
+#home {
+    position: relative;
+    overflow: hidden;
+}
+
+#home .home__img {
+    position: relative;
+    width: 100%;
+    height: 135vh;
+    background-image: url(images/layout_img/capa.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#home .home__text {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 750px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cor01);
+    z-index: 1;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+#home .home__text > h1 {
+    color: var(--cor01);
+    font-size: 5.5em;
+    font-weight: 700;
+    margin: auto;
+}
+
+#home .home__text > p.introd {
+    font-size: 1em;
+    max-width: 400px;
+    line-height: 1.2;
+}
+
+@media (max-width: 800px), (min-height: 1000px) {
+    #home .home__img {
+        background-image: url(images/layout_img/capa_tablet.jpg);
+    }
+
+    #home .home__text > h1 {
+        font-size: 4.1em;
+    }
+
+    #home .home__text > p.introd {
+        font-size: 0.85em;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 550px) {
+    #home .home__img {
+        background-image: url(images/layout_img/capa_celular.jpg);
+    }
+
+    #home .home__text {
+        width: 70%;
+        padding: 15px;
+        background-color: #2a28297d;
+    }
+
+    #home .home__text > h1 {
+        font-size: 3.8em;
+    }
+
+    #home .home__text > p.introd {
+        font-size: 0.7em;
+        max-width: 300px;
+    }
+}
+
+/*------------------Sobre mim---------------------------*/
+#aboutme {
+    margin: 0px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#aboutme .aboutme__img {
+    margin-bottom: 50px;
+}
+
+#aboutme .aboutme__img > img {
+    width: 75%;
+    border-radius: 5%;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.277);
+}
+
+#aboutme .aboutme__text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#aboutme .aboutme__text > p {
+    font-size: 1.5em;
+    padding: 2px;
+    color: var(--cor04);
+    max-width: 590px;
+    margin: auto;
+    text-align: justify;
+    margin: 0px 40px 30px 40px;
+}
+
+#aboutme .aboutme__text > h2 {
+    padding: 2px;
+    text-align: justify;
+    margin: 50px 40px 60px 40px;
+    font-size: 3.5em;
+    max-width: 500px;
+}
+
+@media (max-width: 1450px) {
+    #aboutme {
+        margin-bottom: 100px;
+    }
+
+    #aboutme > .aboutme__text > p {
+        max-width: 390px;
+        font-size: 1.24em;
+        margin: 0px 0px 20px 30px;
+    }
+
+    #aboutme .aboutme__text> h2 {
+        margin: 0px 0px 40px 30px;
+        font-size: 3.24em;    
+    }
+}
+
+@media (max-width: 1140px) {
+    #aboutme > .aboutme__text > p {
+        max-width: 800px;
+        font-size: 1.24em;
+        padding: 0px 10px 10px 10px;
+        margin: 0px 10px 10px 30px;
+    }
+
+    #aboutme .aboutme__text > h2 {
+        margin: 30px 0px 40px 30px;
+        font-size: 3.24em;    
+    }
+
+    #aboutme .aboutme__img > img {
+        margin: 0;
+    }
+}
+/*---------------------Seção de Projetos---------------------*/
+#projetos h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.project-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.project-item {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.more-projects {
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.toggle-more {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-more:hover {
+    background-color: #0056b3;
+}
+/*-------------------Minha trajetória----------------------*/
+
+
+#trajectory .trajectory__gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;  
+    padding: 20px;
+    gap: 20px;
+}
+
+.image-container {
+    transition: transform 0.3s ease;
+}
+
+.image-container img { 
+    border-radius: 20px; 
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.267);
+    max-width: 300px;
+    height: 100%;       
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 680px) {
+    .image-container img { 
+        max-width: 80%;
+        min-width: 80%;
+        height: 100%;       
+    }  
+}
+
+/*---------------------------Rodapé------------------------*/
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--cor06);
+    padding: 0px;
+    width: 100%;
+    margin: 60px 0px 60px 0px;
+}
+
+footer > div {
+    width: auto;
+    text-align: center;
+}
+
+footer > div.contact {
+    width: 200px;
+}
+
+footer > .title > h1 {
+    font-size: 5em;
+    width: 310px;
+}
+
+footer .title > h1 > a {
+    color: var(--cor06);
+} 
+
+footer > div > h2 {
+    font-weight: bold;
+    padding-left: 30px;
+    margin: auto;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    footer > div > h2 {
+        width: 150px;
+    }
+
+    footer > .title > h1 {
+        font-size: 4em;
+        width: 210px;
+    }
+}
+
+@media (max-width: 800px) {
+    footer {
+        justify-content: space-evenly; 
+        padding: 90px 0px;
+        margin: 0px;
+    }
+
+    footer > div > h2 {
+        width: 90px; 
+    }
+
+    footer .title > h1 {
+        font-size: 3.5em;
+        width: 210px; 
+    }
+}
+
+@media (max-width: 570px) {
+    footer {
+        justify-content: space-evenly; 
+        padding: 90px 0px;
+        margin: 0px;
+    }
+
+    footer > div > h2 {
+        width: 60px; 
+    }
+
+    footer > div {
+      font-size: 72%;  
+    }
+
+    footer .title > h1 {
+        font-size: 3.2em;
+        width: 140px; 
+    }
+}
