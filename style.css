@@ -476,6 +476,7 @@ footer > div > h2 {
         justify-content: space-evenly; 
         padding: 90px 0px;
         margin: 0px;
+        gap: 5px;
     }
 
     footer > div > h2 {
@@ -487,7 +488,8 @@ footer > div > h2 {
     }
 
     footer .title > h1 {
-        font-size: 3.2em;
-        width: 133px; 
+        font-size: 3.8em;
+        width: 165px; 
+        padding: 0px;
     }
 }
