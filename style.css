@@ -268,7 +268,7 @@ a:active {
     max-width: 500px;
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1470px) {
     #aboutme {
         margin-bottom: 100px;
     }
@@ -517,7 +517,7 @@ footer > div > h2 {
     }
 
     footer > div > h2 {
-        width: 73px; 
+        width: 75px; 
     }
 
     footer > div {
