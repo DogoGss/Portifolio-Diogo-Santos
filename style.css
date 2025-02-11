@@ -57,7 +57,7 @@ a:hover {
 }
 
 a:active {
-    font-size: 105%;
+    font-size: 120%;
 }
 /*--------------------------Cabecalho---------------------------*/
 #cabecalho .cabeca {
@@ -395,9 +395,13 @@ a:active {
 }
 
 @media (max-width: 680px) {
+    #trajectory .trajectory__gallery {
+        padding: 3px;
+        gap: 3px;
+    }
     .image-container img { 
-        max-width: 80%;
-        min-width: 80%;
+        max-width: 90%;
+        min-width: 85%;
         height: 100%;       
     }  
 }
