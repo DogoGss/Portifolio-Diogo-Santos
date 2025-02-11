@@ -25,7 +25,8 @@ html {
 /* Config corpo */
 body {
     color: var(--cor04); 
-    background-image: linear-gradient(to right, var(--cor02), var(--cor03)); 
+    background-image: linear-gradient(to right, var(--cor02), var(--cor03));
+    overflow-x: hidden; 
 }
 
 main {
@@ -50,7 +51,7 @@ a {
 ul {
     list-style-type: none;
     text-align: left;    
-    padding: 2;            
+    padding: 2px;            
 } 
 a:hover {
     font-size: 105%;
@@ -67,12 +68,31 @@ a:active {
     }
 }
 /*--------------------------Cabecalho---------------------------*/
+a.link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor01);
+    border-radius: 5px;
+    transform: translateX(-50%);
+    transition: width 0.6s ease;
+}
+a.link:hover::after {
+    width: 90%; 
+}
+
+.nav .nav__listbar{
+    display: none;
+}
 #cabecalho .cabeca {
     display: flex;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    padding: 5px 5px 0px 5px;
+    padding: 0px 5px 0px 5px;
     font: normal 700 1.1em "syne";
     color: var(--cor01);
     position: fixed; 
@@ -94,7 +114,7 @@ a:active {
     margin: auto;
 }
 
-#cabecalho .cabeca .nav > ul {
+#cabecalho .cabeca .nav .nav__list {
     position: absolute;
     margin-top: -10px;
     font-size: 0.8em;
@@ -103,28 +123,13 @@ a:active {
     gap: 15px;
     left: 10px;
 }
-#cabecalho .cabeca .nav ul li a.link {
+#cabecalho .cabeca .nav .nav__list li a.link {
     text-decoration: none;
     color: var(--cor01);
     position: relative;
     display: inline-block;
     padding: 5px 0;
     transition: color 0.3s ease; /* Transição suave para a cor do texto */
-}
-a.link::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: var(--cor01);
-    border-radius: 5px;
-    transform: translateX(-50%);
-    transition: width 0.6s ease;
-}
-a.link:hover::after {
-    width: 90%; 
 }
 
 #cabecalho .cabeca .nav > a {
@@ -139,15 +144,38 @@ a.link:hover::after {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     color: var(--cor01);
+    height: 9vh;
 }
 
 @media (max-width: 900px) {
-    #cabecalho .cabeca .nav > ul {
+    #cabecalho .cabeca .nav .nav__list {
         display: none;     
     }
     #cabecalho .cabeca .nav > a{
         display: block;
     }
+    .nav .nav__listbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #e4e4e0bb;
+        position: absolute;
+        margin-top: -5vh;
+        left: 0px;
+        width: 50vw;
+        height: 100vh;
+        transform: translateX(-100%);
+    }
+    .nav .nav__listbar .link {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    #cabecalho .cabeca .nav:active  {
+        transform: translateX(0);
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -160,7 +188,7 @@ a.link:hover::after {
     }
 }
 
-#cabecalho .cabeca .nav > ul > li > a {
+#cabecalho .cabeca .nav .nav__list > li > a {
     color: var(--cor01);
 }
 
