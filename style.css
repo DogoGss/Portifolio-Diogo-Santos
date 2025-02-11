@@ -75,7 +75,6 @@ a:active {
     padding: 5px 5px 0px 5px;
     font: normal 700 1.1em "syne";
     color: var(--cor01);
-    position: relative;
     position: fixed; 
     background-color: transparent;
     top: 0;
@@ -88,9 +87,9 @@ a:active {
 
 #cabecalho .cabeca .centro {
     text-align: center;
+    font-size: 1.1em;
     max-width: 400px;
     padding: 5px 10px 0px 10px;
-    font-size: 1.1em;
     margin: auto;
 }
 
@@ -111,6 +110,7 @@ a:active {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     color: var(--cor01);
+    height: 50px;
 }
 
 @media (max-width: 900px) {
@@ -125,7 +125,7 @@ a:active {
 @media (max-width: 600px) {
     #cabecalho .cabeca .centro {
         max-width: 290px;
-        font-size: 1em;
+        font-size: 0.9em;
     }
 }
 
@@ -442,10 +442,12 @@ footer > .title > h1 {
 footer .title > h1 > a {
     color: var(--cor06);
 } 
-
+footer .title > h1 > a:active {
+    text-decoration: none;
+}
 footer > div > h2 {
     font-weight: bold;
-    padding-left: 30px;
+    padding-left: 2px;
     margin: auto;
 }
 
@@ -491,7 +493,7 @@ footer > div > h2 {
     }
 
     footer > div > h2 {
-        width: 58px; 
+        width: 68px; 
     }
 
     footer > div {
