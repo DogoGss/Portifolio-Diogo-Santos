@@ -86,6 +86,7 @@ a:active {
 }
 
 #cabecalho .cabeca .centro {
+    position: absolute;
     text-align: center;
     font-size: 1.1em;
     max-width: 400px;
@@ -93,15 +94,42 @@ a:active {
     margin: auto;
 }
 
-#cabecalho .cabeca .nav {
+#cabecalho .cabeca .nav > ul {
+    position: absolute;
+    margin-top: -10px;
     font-size: 1em;
     display: flex;
-    gap: 27px;
-    position: absolute;
+    gap: 20px;
     left: 10px;
+}
+#cabecalho .cabeca .nav ul li a.link {
+    text-decoration: none;
+    color: var(--cor01);
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+    transition: color 0.3s ease; /* Transição suave para a cor do texto */
+}
+a.link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor01);
+    border-radius: 5px;
+    transform: translateX(-50%);
+    transition: width 0.6s ease;
+}
+a.link:hover::after {
+    width: 100%; 
 }
 
 #cabecalho .cabeca .nav > a {
+    position: absolute;
+    left: 10px;
+    top: 23px;
     display: none;
 }
 
@@ -113,7 +141,7 @@ a:active {
 }
 
 @media (max-width: 900px) {
-    #cabecalho .cabeca .nav > p {
+    #cabecalho .cabeca .nav > ul {
         display: none;     
     }
     #cabecalho .cabeca .nav > a{
@@ -127,11 +155,11 @@ a:active {
         font-size: 0.9em;
     }
     #cabecalho .cabeca.scrolled {
-        height: 50px;
+        height: 56px;
     }
 }
 
-#cabecalho .cabeca .nav > p > a {
+#cabecalho .cabeca .nav > ul > li > a {
     color: var(--cor01);
 }
 
