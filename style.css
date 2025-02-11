@@ -127,6 +127,9 @@ a:active {
         max-width: 290px;
         font-size: 0.9em;
     }
+    #cabecalho .cabeca.scrolled {
+        height: 50px;
+    }
 }
 
 #cabecalho .cabeca .nav > p > a {
@@ -497,11 +500,11 @@ footer > div > h2 {
     }
 
     footer > div {
-      font-size: 72%;  
+      font-size: 67%;  
     }
 
     footer .title > h1 {
-        font-size: 3.5em;
+        font-size: 3.6em;
         width: 165px; 
         padding: 0px;
         margin: 8px;
