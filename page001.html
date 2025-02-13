@@ -17,35 +17,25 @@
 
             --fonte-padrão: 
         }
+        h1 {
+            font-size: 4em;
+        }
         /*-----------------------Cabecalho---------------------------*/
-        #cabecalho .cabeca {
+        a.link::after {
+            background-color: var(--cor04);
+        }
+        #cabecalho .cabeca .nav .nav__list li > a.link {
             color: var(--cor04);
         }
-
+        #cabecalho .cabeca .centro > a {
+            color: var(--cor04);
+        }
         #cabecalho .cabeca.scrolled {
-            background-image: linear-gradient(to right, #e0e0dbe4, #e4e4e0e7);  
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-            color: #09101085;
+            background-color: #e4e4e0d2; 
+            color: var(--cor01);
         }
-
-        .cabeca > nav > p > a {
-            color: var(--cor04);
-            text-decoration: none;
-        }
-
-        .cabeca > p > a {
-            color: var(--cor04);
-            text-decoration: none;
-        }
-
-        .cabeca .esquerda > a {
-            color: var(--cor04);
-        }
-
         /*-------------------------------------Introdução-----------------------------------*/
         main{
-            margin-top: 100px;
             text-align: center;
         }
         .introd {
@@ -55,9 +45,10 @@
             align-content: center;
             justify-content: center;
             flex-direction: column;
-            margin: 100px;
+            margin: 200px;
         }
         .introd .introd__paragraph {
+            margin-top: 30px;
             font-size: 1.5em;
         }
         /*--------------------------------------Galeria--------------------------------------*/
@@ -98,16 +89,29 @@
     </script>
 </head>
 <body>
-    <header id="cabecalho">
-        <div class="cabeca">
-            <nav class="esquerda">
-                <p><a href="index.html#aboutme" target="_self">Quem sou eu</a></p>
-                <p><a href="index.html#contatos" target="_self">Contato</a></p>
-                <a href=""> <img src="images/icones/menu-hamburguer.png" alt=""></a>
-            </nav>
-            <p class="centro"><a href="index.html#cabecalho" target="_self" rel="header">DIOGO SANTOS | ENGENHEIRO EM CONTROLE E AUTOMAÇÃO</a></p>
-        </div>
-    </header>
+    <body>
+        <header id="cabecalho">
+            <div class="cabeca">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a class="link" href="index.html#aboutme" target="_self">Quem sou eu</a></li>
+                        <li><a class="link" href="index.html#projetos" target="_self">Meus Projetos</a></li>
+                        <li><a class="link" href="index.html#contatos" target="_self">Contato</a></li>
+                    </ul>
+                    <!--<p><a href="index.html#aboutme" target="_self">Quem sou eu</a></p>
+                    <p><a href="index.html#contatos" target="_self">Contato</a></p>-->
+                    <a href=""> <img src="images/icones/menu-hamburguer.png" alt="">
+                    <ul class="nav__listbar">
+                        <li><a class="link" href="index.html#aboutme" target="_self">Sobre mim</a></li>
+                        <li><a class="link" href="index.html#projetos" target="_self">Projetos</a></li>
+                        <li><a class="link" href="index.html#trajectory" target="_self">Trajetória</a></li>
+                        <li><a class="link" href="index.html#contatos" target="_self">Contato</a></li>
+                    </ul>
+                    </a>
+                </nav>
+                <div class="centro"><a href="index.html#cabecalho" target="_self" rel="header">DIOGO SANTOS | TÉCNICO EM AUTOMAÇÃO INDUSTRIAL</a></div>
+            </div>
+        </header>
     <main>   
         <section class="introd">
             <h1 class="introd__title">

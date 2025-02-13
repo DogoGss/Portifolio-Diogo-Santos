@@ -18,6 +18,7 @@ html {
 
 /* Config geral */
 * {
+    font-family: var(--fonte-padrão);
     margin: 0px;
     padding: 0px;
 }
@@ -35,12 +36,19 @@ main {
 
 h1 {
     color: var(--cor06);
-    font-size: 3.5em;
+    font-size: 5em;
+    font-weight: 700;
     text-align: center;
-    margin: 30px;
-    padding: 20px;
 }
 
+h2 {
+    font-size: 3em;
+    color: var(--cor06);
+}
+
+p {
+    font-size: normal;
+}
 a {
     color: var(--cor05);
     font-style: oblique;
@@ -62,9 +70,17 @@ a:active {
     color: #00157e;
     
 }
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2.8em;
+@media (max-width: 1000px) {
+
+    h2 {
+        font-size: 2.6em;
+    }
+}
+
+@media (max-width: 570px) {
+
+    h2 {
+        font-size: 2.3em;
     }
 }
 /*--------------------------Cabecalho---------------------------*/
@@ -232,13 +248,12 @@ a.link:hover::after {
 
 #home .home__text > h1 {
     color: var(--cor01);
-    font-size: 5.5em;
-    font-weight: 700;
     margin: auto;
+    padding: 20px;
 }
 
 #home .home__text > p.introd {
-    font-size: 1em;
+    font-size: 0.9em;
     max-width: 400px;
     line-height: 1.2;
 }
@@ -249,11 +264,11 @@ a.link:hover::after {
     }
 
     #home .home__text > h1 {
-        font-size: 4.1em;
+        font-size: 3.8em;
     }
 
     #home .home__text > p.introd {
-        font-size: 0.85em;
+        font-size: 0.8em;
         max-width: 350px;
     }
 }
@@ -293,8 +308,8 @@ a.link:hover::after {
 }
 
 #aboutme .aboutme__img > img {
-    width: 75%;
-    border-radius: 5%;
+    width: 87%;
+    border-radius: 10%;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.277);
 }
 
@@ -309,7 +324,8 @@ a.link:hover::after {
     display: none;
 }
 #aboutme .aboutme__text > p {
-    font-size: 1.5em;
+    text-indent: 17px;
+    font-size: 1.3em;
     padding: 2px;
     color: var(--cor04);
     max-width: 590px;
@@ -322,7 +338,6 @@ a.link:hover::after {
     padding: 2px;
     text-align: justify;
     margin: 50px 40px 60px 40px;
-    font-size: 3.5em;
     max-width: 500px;
 }
 
@@ -330,15 +345,20 @@ a.link:hover::after {
     #aboutme {
         margin-bottom: 100px;
     }
-
+    #aboutme .aboutme__img > img {
+        width: 84%;
+        border-radius: 10%;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.277);
+    }
     #aboutme > .aboutme__text > p {
-        max-width: 390px;
-        font-size: 1.24em;
-        margin: 0px 0px 20px 30px;
+        padding-left: 0px;
+        max-width: 400px;
+        font-size: 1.2em;
+        margin: 0px 0px 20px 20px;
     }
 
     #aboutme .aboutme__text> h2 {
-        margin: 0px 0px 40px 30px;
+        margin: 10px 0px 40px 10px;
         font-size: 3.24em;    
     }
 }
@@ -373,36 +393,48 @@ a.link:hover::after {
     #aboutme .aboutme__text .aboutme__img > img {
         display: flex;
         width: 55%;
-        border-radius: 50%;
+        border-radius: 10%;
         box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.277);
     }
     #aboutme .aboutme__img > img {
+
         display: none;
     }
 }
+
+@media (max-width: 650px) {
+    #aboutme .aboutme__text .aboutme__img > img {
+        border-radius: 150%;
+    }
+}
 /*---------------------Seção de Projetos---------------------*/
-#projetos h1 {
+#projetos h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
+#projetos {
+    margin-top: 80px;
+}
 .tabs {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .tab-button {
-    padding: 10px 20px;
+    padding: 15px 25px;
     border: none;
-    background-color: #f0f0f0;
+    background-color: #0020c0f8;
+    color: var(--cor01);
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .tab-button.active {
-    background-color: #007BFF;
+    background-color: var(--cor05);
     color: white;
 }
 
@@ -444,8 +476,9 @@ a.link:hover::after {
 .toggle-more {
     display: block;
     margin: 10px auto;
-    padding: 10px 20px;
-    background-color: #007BFF;
+    padding: 15px 25px;
+    background-color: #0020c0f8;
+    border-radius: 30px;
     color: white;
     border: none;
     cursor: pointer;
@@ -453,12 +486,16 @@ a.link:hover::after {
 }
 
 .toggle-more:hover {
-    background-color: #0056b3;
+    background-color: var(--cor05);
 }
 /*-------------------Minha trajetória----------------------*/
 
+#trajectory {
+    margin-top: 100px;
+}
 
 #trajectory .trajectory__gallery {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -504,7 +541,7 @@ footer {
     color: var(--cor06);
     padding: 0px;
     width: 100%;
-    margin: 60px 0px 60px 0px;
+    margin: 100px 0px 60px 0px;
 }
 
 footer > div {
@@ -516,18 +553,18 @@ footer > div.contact {
     width: 200px;
 }
 
-footer > .title > h1 {
-    font-size: 5em;
+footer > .title > h2 {
+    font-size: 4.5em;
     width: 310px;
 }
 
-footer .title > h1 > a {
+footer .title > h2 > a {
     color: var(--cor06);
 } 
-footer .title > h1 > a:active {
+footer .title > h2 > a:active {
     text-decoration: none;
 }
-footer > div > h2 {
+footer > div > h3 {
     font-weight: bold;
     padding-left: 2px;
     margin: auto;
@@ -539,11 +576,11 @@ footer > div > h2 {
         gap: 20px;
     }
 
-    footer > div > h2 {
+    footer > div > h3 {
         width: 150px;
     }
 
-    footer > .title > h1 {
+    footer > .title > h2 {
         font-size: 4em;
         width: 210px;
     }
@@ -556,11 +593,11 @@ footer > div > h2 {
         margin: 0px;
     }
 
-    footer > div > h2 {
+    footer > div > h3 {
         width: 90px; 
     }
 
-    footer .title > h1 {
+    footer .title > h2 {
         font-size: 3.5em;
         width: 210px; 
     }
@@ -574,7 +611,7 @@ footer > div > h2 {
         gap: 5px;
     }
 
-    footer > div > h2 {
+    footer > div > h3 {
         width: 75px; 
     }
 
@@ -582,7 +619,7 @@ footer > div > h2 {
       font-size: 67%;  
     }
 
-    footer .title > h1 {
+    footer .title > h2 {
         font-size: 3.6em;
         width: 165px; 
         padding: 0px;
