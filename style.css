@@ -165,8 +165,6 @@ a.link:hover::after {
 }
 #cabecalho .cabeca.scrolled {
     background-color: #09101085; 
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
     color: var(--cor01);
     height: 9vh;
 }
@@ -178,27 +176,29 @@ a.link:hover::after {
     #cabecalho .cabeca .nav .nav__listbar{
         display: none;
         flex-direction: column;
-        background-color: #333333b2;
+        background-color: #09101085;
         position: absolute;
         border-radius: 0;
-        top: 65.5px;
+        top: 9vh;
         right: 0;
         width: 100%;
         text-align: center;
     }
     #cabecalho .cabeca .nav .nav__listbar.active {
         display: flex;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
     #cabecalho .cabeca .nav .menu-toggle {
         display: flex;
     }
     #cabecalho .cabeca .nav .menu-toggle #mid.active{
         transform-origin: center;
-        transform: rotate(-45deg) translateY(7px) scaleX(0.9) scaleY(1.1);
+        transform: rotate(-45deg) translateY(7px) scaleY(1.1);
     }
     #cabecalho .cabeca .nav .menu-toggle #low.active{
         transform-origin: center;
-        transform: rotate(45deg) translateY(-7px) scaleX(0.9) scaleY(1.1);
+        transform: rotate(45deg) translateY(-7px) scaleY(1.1);
     }
     #cabecalho .cabeca .nav .menu-toggle #high.active{
         display: none;
@@ -213,6 +213,14 @@ a.link:hover::after {
     }
     #cabecalho .cabeca.scrolled {
         height: 56px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    #cabecalho .cabeca .nav .nav__listbar{
+        top: 8vh;
+    }
+    #cabecalho .cabeca .nav .nav__listbar.active {
+        border-radius: 15px;
     }
 }
 
