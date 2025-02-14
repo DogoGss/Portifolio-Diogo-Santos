@@ -24,6 +24,9 @@
         a.link::after {
             background-color: var(--cor04);
         }
+        #cabecalho .cabeca .nav .menu-toggle span {
+            background-color: var(--cor04);
+        }
         #cabecalho .cabeca .nav .nav__list li > a.link {
             color: var(--cor04);
         }
@@ -106,7 +109,11 @@
                     </ul>
                     <!--<p><a href="index.html#aboutme" target="_self">Quem sou eu</a></p>
                     <p><a href="index.html#contatos" target="_self">Contato</a></p>-->
-                    <a href=""> <img src="images/icones/menu-hamburguer.png" alt="">
+                    <div class="menu-toggle" id="mobile-menu">
+                        <span id="high"></span>
+                        <span id="mid"></span>
+                        <span id="low"></span>
+                    </div>
                     <ul class="nav__listbar">
                         <li><a class="link" href="index.html#aboutme" target="_self">Sobre mim</a></li>
                         <li><a class="link" href="index.html#projetos" target="_self">Projetos</a></li>
@@ -153,6 +160,23 @@
             </div>
         </section>
     </main>
+
+    <script>
+        const menuHigh = document.getElementById('high');
+        const menuMid = document.getElementById('low');
+        const menuLow = document.getElementById('mid');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav__listbar');
+
+        // Adiciona um evento de clique ao botão de menu
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active'); // Alterna a classe 'active'
+            menuLow.classList.toggle('active');  
+            menuMid.classList.toggle('active');  
+            menuHigh.classList.toggle('active');   
+        });
+
+    </script>
 
 </body>
 </html>
