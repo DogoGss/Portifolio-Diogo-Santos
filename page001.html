@@ -80,22 +80,6 @@
         }
 
     </style>
-    <script>
-        window.addEventListener('scroll', function() {
-        var cabeca = document.querySelector('.cabeca');
-        
-        if (window.scrollY > 100) { // Quando o scroll ultrapassar 50px
-            cabeca.classList.add('scrolled');
-        } else {
-            cabeca.classList.remove('scrolled');
-        }
-        window.onload = function() {
-            if (window.location.hash) {
-                window.location.hash = "cabecalho";
-            }
-        }
-    });
-    </script>
 </head>
 <body>
     <body>
@@ -160,23 +144,6 @@
             </div>
         </section>
     </main>
-
-    <script>
-        const menuHigh = document.getElementById('high');
-        const menuMid = document.getElementById('low');
-        const menuLow = document.getElementById('mid');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelector('.nav__listbar');
-
-        // Adiciona um evento de clique ao botão de menu
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active'); // Alterna a classe 'active'
-            menuLow.classList.toggle('active');  
-            menuMid.classList.toggle('active');  
-            menuHigh.classList.toggle('active');   
-        });
-
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

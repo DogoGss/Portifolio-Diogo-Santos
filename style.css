@@ -73,14 +73,13 @@ a:active {
 @media (max-width: 1000px) {
 
     h2 {
-        font-size: 2.6em;
+        font-size: 2.4em;
     }
 }
 
 @media (max-width: 570px) {
-
     h2 {
-        font-size: 2.3em;
+        font-size: 2.1em;
     }
 }
 /*--------------------------Cabecalho---------------------------*/
@@ -305,7 +304,7 @@ a.link:hover::after {
     }
 
     #home .home__text > h1 {
-        font-size: 3.6em;
+        font-size: 3.4em;
     }
 
     #home .home__text > p.introd {
@@ -378,8 +377,7 @@ a.link:hover::after {
     }
 
     #aboutme .aboutme__text> h2 {
-        margin: 10px 0px 40px 10px;
-        font-size: 3.24em;    
+        margin: 10px 0px 40px 10px;  
     }
 }
 
@@ -400,10 +398,6 @@ a.link:hover::after {
         margin: 0px 15px 10px 15px;
     }
 
-    #aboutme .aboutme__text > h2 {
-        margin: 40px 8px 30px 8px;
-        font-size: 2.8em;    
-    }
     #aboutme .aboutme__text .aboutme__img {
         display: flex;
         flex-wrap: wrap;
@@ -417,7 +411,6 @@ a.link:hover::after {
         box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.277);
     }
     #aboutme .aboutme__img > img {
-
         display: none;
     }
 }
