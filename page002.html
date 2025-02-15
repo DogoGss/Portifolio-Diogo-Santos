@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5,64 +7,80 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <style>
-        .image-container1 {
+        :root {
+            --cor01: #EBEDF2;
+            --cor02: #E0E0DB;
+            --cor03: #e4e4e0;
+            --cor04: #0C1011;
+            --cor05: #000e52;
+            --cor06: #2A2829;
+
+            --fonte-padrão: 
+        }
+        h1 {
+            font-size: 4em;
+        }
+        /*-----------------------Cabecalho---------------------------*/
+        a.link::after {
+            background-color: var(--cor04);
+        }
+        #cabecalho .cabeca .nav .menu-toggle span {
+            background-color: var(--cor04);
+        }
+        #cabecalho .cabeca .nav .nav__list li > a.link {
+            color: var(--cor04);
+        }
+        #cabecalho .cabeca .centro > a {
+            color: var(--cor04);
+        }
+        #cabecalho .cabeca.scrolled {
+            background-color: #e4e4e0d2; 
+            color: var(--cor01);
+        }
+        /*-------------------------------------Introdução-----------------------------------*/
+        main{
+            text-align: center;
+        }
+        .introd {
+            display: flex;
+            text-align: center;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 200px;
+            gap: 30px;
+        }
+        .introd .introd__paragraph {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            max-width: 800px;
+            height: auto;
+            margin: auto;
+        }
+        /*--------------------------------------Galeria--------------------------------------*/
+        .galery .image-container1 {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            margin-top: 100px;
+            margin-top: 80px;
             gap: 20px;
-            padding: 20px;
+            padding: 8px;
         }
 
-        .image-container1 img {
-            width: 300px; /* Corrigido para incluir a unidade 'px' */
-            height: 100%;
+        .galery .image-container1 img {
+            height: 300px;
+            width: 400px;
             object-fit: cover;
             border-radius: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.297);
         }
-        /*-----------------------Cabecalho---------------------------*/
-        #cabecalho .cabeca {
-            color: #091010;
-        }
-
-        #cabecalho .cabeca.scrolled {
-            background-image: linear-gradient(to right, #e0e0dbe4, #e4e4e0e7);  
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-            color: #09101085;
-        }
-
-        .cabeca > nav > p > a {
-            color: #091010;
-            text-decoration: none;
-        }
-
-        .cabeca > p > a {
-            color: #091010;
-            text-decoration: none;
-        }
 
     </style>
-    <script>
-        window.addEventListener('scroll', function() {
-            var cabeca = document.querySelector('.cabeca');
-            if (window.scrollY > 100) { // Quando o scroll ultrapassar 100px
-                cabeca.classList.add('scrolled');
-            } else {
-                cabeca.classList.remove('scrolled');
-            }
-        });
-
-        window.onload = function() {
-            if (window.location.hash) {
-                window.location.hash = "cabecalho";
-            }
-        }
-    </script>
 </head>
-
 <body>
     <body>
         <header id="cabecalho">
@@ -75,7 +93,11 @@
                     </ul>
                     <!--<p><a href="index.html#aboutme" target="_self">Quem sou eu</a></p>
                     <p><a href="index.html#contatos" target="_self">Contato</a></p>-->
-                    <a href=""> <img src="images/icones/menu-hamburguer.png" alt="">
+                    <div class="menu-toggle" id="mobile-menu">
+                        <span id="high"></span>
+                        <span id="mid"></span>
+                        <span id="low"></span>
+                    </div>
                     <ul class="nav__listbar">
                         <li><a class="link" href="index.html#aboutme" target="_self">Sobre mim</a></li>
                         <li><a class="link" href="index.html#projetos" target="_self">Projetos</a></li>
@@ -87,23 +109,41 @@
                 <div class="centro"><a href="index.html#cabecalho" target="_self" rel="header">DIOGO SANTOS | TÉCNICO EM AUTOMAÇÃO INDUSTRIAL</a></div>
             </div>
         </header>
-    <p>
-
-    </p>
-
-
-    <div class="image-container1">
-        <a href="coltec-imagens/Cora/300/20230919_143638.jpg" target="_self"><img src="coltec-imagens/Cora/300/20230919_143638.jpg" alt=""></a>
-        <img src="coltec-imagens/Cora/300/IMG-20230919-WA0014.jpg" alt="">
-        <img src="coltec-imagens/Cora/300/IMG-20230922-WA0014.jpg" alt="">
-        <img src="coltec-imagens/Cora/300/20230601_171207.jpg" alt="">
-        <img src="coltec-imagens/Cora/300/20230601_171209.jpg" alt="">
-        <img src="coltec-imagens/Cora/300/20230622_135159.jpg" alt="">
-        <img src="coltec-imagens/Cora/300/20230918_131850.jpg" alt="">
-    </div>
-
-
+    <main>   
+        <section class="introd">
+            <h1 class="introd__title">
+                Cora (Competição de Robôs Autônomos)
+            </h1>
+            <span class="introd__paragraph">
+                A Cora foi uma competição realizada em um dos prédios da Engenharia na UFMG, a qual tinha o objetivo de reunir equipes da UFMG e outras escolas de MG para realizar projetos de robôs seguidores de linha. O torneio foi organizado pelo Programa de Educação Tutorial da Engenharia Elétrica (PETEE), possibilitando aos participantes uma ampla aprendizagem em diversos conteúdos relacionados à base de conhecimentos de robótica, como métodos de controle de sensores, processamentos de sinais elétricos, escolha e utilização de motores de acordo com suas aplicações, conhecimentos em linguagens de programação, desenvolvimentos de placas e componentes de circuitos elétricos, entre várias outros métodos e meios necessários para construção de robôs seguidores de linha eficientes. 
+            </span>
+        </section>
     
-
+    
+        <section class="galery">
+            <div class="image-container1">
+                <img src="coltec-imagens/Cora/20230919_143438 (2).jpg"alt="">
+                <img src="coltec-imagens/Cora/20230919_143638.jpg"alt="">
+                <img src="coltec-imagens/Cora/IMG-20230306-WA0004 (2).jpg"alt="">
+                <img src="coltec-imagens/Cora/IMG-20230306-WA0006.jpg"alt="">
+                <img src="coltec-imagens/Cora/IMG-20230306-WA0015.jpg"alt="">
+                <img src="coltec-imagens/Cora/IMG-20230306-WA0017 (2).jpg"alt="">
+                <img src="coltec-imagens/Cora/IMG-20230306-WA0018 (2).jpg"alt="">
+                <img src="coltec-imagens/Cora/IMG-20230306-WA0025 (2).jpg"alt="">
+                <img src="coltec-imagens/Cora/IMG-20230522-WA0006 (2).jpg"alt="">
+                <img src="coltec-imagens/Cora/IMG-20230919-WA0035 (2).jpg"alt="">
+                <img src="coltec-imagens/Cora/IMG-20230919-WA0060 (2).jpg"alt="">
+                <img src="coltec-imagens/Cora/IMG-20230921-WA0001 (2).jpg"alt="">
+                <img src="coltec-imagens/Cora/20230919_082748.jpg"alt="">
+                <img src="coltec-imagens/Cora/300/cora_host_300.jpg" alt="" class="thetwoteams">
+                <img src="coltec-imagens/Cora/300/capa_cora.jpg" alt="" class="team">
+                <img src="coltec-imagens/Cora/300/20230601_171207.jpg" alt="">
+                <img src="coltec-imagens/Cora/300/20230601_171209.jpg" alt="">
+                <img src="coltec-imagens/Cora/300/20230622_135159.jpg" alt="">
+                <img src="coltec-imagens/Cora/300/20230918_131850.jpg" alt="">
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
