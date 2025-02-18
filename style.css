@@ -451,7 +451,7 @@ a.link:hover::after {
 
 #Habilidades .home__img2:hover {
     height: 850px;
-    max-width: 93%;
+    max-width: 90%;
     border-radius: 0px;
     background-position: center;
 }
