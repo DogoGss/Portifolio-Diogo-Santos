@@ -165,7 +165,7 @@ a.link:hover::after {
 #cabecalho .cabeca.scrolled {
     background-color: #09101085; 
     color: var(--cor01);
-    height: 9vh;
+    height: 56px;
 }
 
 @media (max-width: 900px) {
@@ -178,7 +178,7 @@ a.link:hover::after {
         background-color: #09101085;
         position: absolute;
         border-radius: 0;
-        top: 9vh;
+        top: 56px;
         right: 0;
         width: 100%;
         text-align: center;
@@ -216,7 +216,7 @@ a.link:hover::after {
         border-bottom-right-radius: 15px;
     }
     #cabecalho .cabeca .nav .nav__listbar{
-        top: 8vh;
+        top: 59px;
     }
     #cabecalho .cabeca .nav .nav__listbar.active {
         border-radius: 15px;
@@ -434,42 +434,43 @@ a.link:hover::after {
 }
 
 /*--------------------Habilidades Específicas-----------------*/
-#Habilidades .home__img2 {
+#Habilidades .fundo2 {
     position: relative;
-    height: 600px;
-    max-width: 87%;
+    height: 680px;
+    max-width: 94%;
     margin: auto;
     border-radius: 15px;
     box-shadow: 0px 0px 15px #01082d70 ;
     background-image: url(images/layout_img/capa3.jpg);
-    background-position: right center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: max-width 2s ease, height 2s ease, background-position 2s ease, border-radius 4s ease;
+    transition: max-width 1s ease, height 2s ease, background-position 2s ease, border-radius 4s ease;
     overflow: hidden;
 }
 
-#Habilidades .home__img2:hover {
-    height: 850px;
-    max-width: 90%;
-    border-radius: 0px;
+#Habilidades .fundo2:hover {
+    height: 780px;
+    max-width: 100%;
+    border-radius: 3px;
     background-position: center;
 }
-#Habilidades .text > h2 {
+#Habilidades .conteudo > h2 {
+    text-shadow: 0px 0px 10px #e4e4e0ac;
     color: var(--cor01);
 }
-#Habilidades .text {
+#Habilidades .conteudo {
     position: absolute;
     z-index: 100;
     margin: auto;
-    max-width: 1300px;
+    width: 700px;
     top: 10vh;
     left: 50%;
     transform: translate(-50%);
 }
 table {
     border-radius: 15px;
-    box-shadow: 0px 0px 10px #01082d90 ;
+    box-shadow: 0px 0px 15px #e4e4e0ac;
     border-collapse: separate;
     border-spacing: 0;
     overflow: hidden;
@@ -495,7 +496,29 @@ tr td:hover {
     background-color: var(--cor05);
     color: var(--cor01);
 }
+@media (max-width: 1000px) {
+    #Habilidades .conteudo {
+        width: 500px;
+    }
+    #Habilidades .fundo2 {
+        height: 800px;
+    }
+    #Habilidades .fundo2:hover {
+        height: 840px;
+    }
+}
 
+@media (max-width: 700px) {
+    #Habilidades .conteudo {
+        width: 300px;
+    }
+    #Habilidades .fundo2 {
+        height: 1000px;
+    }
+    #Habilidades .fundo2:hover {
+        height: 1000px;
+    }
+}
 /*---------------------Seção de Projetos---------------------*/
 #projetos h2 {
     text-align: center;
