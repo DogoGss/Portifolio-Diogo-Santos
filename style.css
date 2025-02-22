@@ -78,6 +78,7 @@ a:active {
 }
 
 @media (max-width: 570px) {
+
     h2 {
         font-size: 2.1em;
     }
@@ -167,7 +168,11 @@ a.link:hover::after {
     color: var(--cor01);
     height: 56px;
 }
-
+@media (max-height: 400px) {
+    #cabecalho .cabeca {
+        height: 50px;
+    }
+}
 @media (max-width: 900px) {
     #cabecalho .cabeca .nav .nav__list {
         display: none;     
@@ -241,7 +246,7 @@ a.link:hover::after {
 .home__img {
     position: relative;
     width: 100%;
-    height: 135vh;
+    height: 130vh;
     background-image: url(images/layout_img/capa2.jpg);
     background-size: cover;
     background-position-y: -10vh;
@@ -285,12 +290,40 @@ a.link:hover::after {
     max-width: 400px;
     line-height: 1.2;
 }
+@media (max-height: 400px) {
+    #home .home__text {
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+    }
+    #home .home__text > h1 {
+        font-size: 3.4em;
+    }
+
+}
+
+@media (max-width: 1280px) {
+    #home .home__img {
+        background-image: url(images/layout_img/capa_pc_tablet.jpg);
+        background-position: center center;
+        
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.456); /* Preto com 50% de transparência */
+    }
+}
+
 
 @media (max-width: 800px), (min-height: 1000px) {
     #home .home__img {
         background-image: url(images/layout_img/capa_tablet.jpg);
         background-position: center center;
-
+        
     }
 
     #home .home__text > h1 {
@@ -302,7 +335,6 @@ a.link:hover::after {
         max-width: 350px;
     }
 }
-
 @media (max-width: 550px) {
     #home .home__img {
         background-image: url(images/layout_img/capa_celular.jpg);
@@ -389,7 +421,7 @@ a.link:hover::after {
     }
 
     #aboutme .aboutme__text> h2 {
-        margin: 10px 0px 40px 10px;  
+        margin: 80px 0px 40px 10px;  
     }
 }
 
@@ -409,7 +441,9 @@ a.link:hover::after {
         padding: 0px 15px 10px 15px;
         margin: 0px 15px 10px 15px;
     }
-
+    #aboutme .aboutme__text> h2 {
+        margin: 50px 0px 40px 10px;  
+    }
     #aboutme .aboutme__text .aboutme__img {
         display: flex;
         flex-wrap: wrap;
