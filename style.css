@@ -251,7 +251,7 @@ a.link:hover::after {
     background-size: cover;
     background-position-y: -10vh;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+
 }
 .overlay {
     position: absolute;
@@ -564,7 +564,8 @@ tr td:hover {
 }
 .tabs {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-left: 3%;
     gap: 10px;
     margin-bottom: 60px;
 }
@@ -572,16 +573,20 @@ tr td:hover {
 .tab-button {
     padding: 15px 25px;
     border: none;
-    background-color: #0020c0f8;
-    color: var(--cor01);
-    border-radius: 30px;
+    background-color: transparent;
+    color: var(--cor04);
+    font-size: 1.1em;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .tab-button.active {
-    background-color: var(--cor05);
-    color: white;
+    background-color: #000e52;
+    border-radius: 50px;
+    color: var(--cor01);
+    font-size: 1.1em;
+    font-weight: 600;
 }
 
 .tab-content {
@@ -594,11 +599,12 @@ tr td:hover {
 
 .project-grid {
     display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
     gap: 20px;
     overflow-x: auto;
     margin-bottom: 20px;
 }
-
 .project-item {
     flex: 0 0 auto;
     width: 200px;
