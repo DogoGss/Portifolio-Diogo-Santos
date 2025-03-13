@@ -22,36 +22,57 @@
         }
         /*-----------------------Cabecalho---------------------------*/
         a.link::after {
-            background-color: var(--cor04);
+            background-color: var(--cor01);
         }
         #cabecalho .cabeca .nav .menu-toggle span {
-            background-color: var(--cor04);
+            background-color: var(--cor01);
         }
         #cabecalho .cabeca .nav .nav__list li > a.link {
-            color: var(--cor04);
+            color: var(--cor01);
         }
         #cabecalho .cabeca .centro > a {
-            color: var(--cor04);
+            color: var(--cor01);
         }
         #cabecalho .cabeca.scrolled {
-            background-color: #e4e4e0d2; 
+            background-color: #000000c2; 
             color: var(--cor01);
         }
         /*-------------------------------------Introdução-----------------------------------*/
         main{
             text-align: center;
         }
-        .introd {
+        .home__summary {
             display: flex;
+            position: absolute;
             text-align: center;
             flex-wrap: wrap;
             align-content: center;
             justify-content: center;
             flex-direction: column;
-            margin: 200px;
+            margin: auto;
             gap: 30px;
+            top: 400px;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
-        .introd .introd__paragraph {
+        .home .home__img3 {
+            display: flex;
+            width: 100%;
+            height: 120vh;
+            position: relative;
+            background-image: url(images/layout_img/capa_page001.webp);
+            background-size: cover;
+
+        }
+        .transition-section {
+            display: flex;
+            position: absolute;
+            top: 87vh;
+            width: 100%;
+            height: 500px; /* Altura da transição */
+            background: linear-gradient(to bottom, transparent, black 50%, rgba(0, 0, 0, 0.025) 97%, transparent); /* Gradiente branco */
+        }
+        .home__summary .summary__paragraph {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -60,17 +81,23 @@
             height: auto;
             margin: auto;
         }
+        .home__summary .summary__paragraph,.summary__title {
+            color: var(--cor01);
+        }
         /*--------------------------------------Galeria--------------------------------------*/
         .galery .image-container1 {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            margin-top: 80px;
             gap: 20px;
             padding: 8px;
         }
-
+        .galery {
+            display: flex;
+            position: relative;
+            margin: 300px;
+        }
         .galery .image-container1 img {
             height: 300px;
             width: 400px;
@@ -110,13 +137,19 @@
             </div>
         </header>
     <main>   
-        <section class="introd">
-            <h1 class="introd__title">
-                Cora (Competição de Robôs Autônomos)
-            </h1>
-            <span class="introd__paragraph">
-                A Cora foi uma competição realizada em um dos prédios da Engenharia na UFMG, a qual tinha o objetivo de reunir equipes da UFMG e outras escolas de MG para realizar projetos de robôs seguidores de linha. O torneio foi organizado pelo Programa de Educação Tutorial da Engenharia Elétrica (PETEE), possibilitando aos participantes uma ampla aprendizagem em diversos conteúdos relacionados à base de conhecimentos de robótica, como métodos de controle de sensores, processamentos de sinais elétricos, escolha e utilização de motores de acordo com suas aplicações, conhecimentos em linguagens de programação, desenvolvimentos de placas e componentes de circuitos elétricos, entre várias outros métodos e meios necessários para construção de robôs seguidores de linha eficientes. 
-            </span>
+        <section class="home">
+            <div class="home__img3">
+                <div class="overlay"></div>
+            </div>
+            <div class="transition-section"></div>
+            <div class="home__summary">
+                <h1 class="summary__title">
+                    Cora (Competição de Robôs Autônomos)
+                </h1>
+                <span class="summary__paragraph">
+                    A Cora foi uma competição realizada em um dos prédios da Engenharia na UFMG, a qual tinha o objetivo de reunir equipes da UFMG e outras escolas de MG para realizar projetos de robôs seguidores de linha. O torneio foi organizado pelo Programa de Educação Tutorial da Engenharia Elétrica (PETEE), possibilitando aos participantes uma ampla aprendizagem em diversos conteúdos relacionados à base de conhecimentos de robótica, como métodos de controle de sensores, processamentos de sinais elétricos, escolha e utilização de motores de acordo com suas aplicações, conhecimentos em linguagens de programação, desenvolvimentos de placas e componentes de circuitos elétricos, entre várias outros métodos e meios necessários para construção de robôs seguidores de linha eficientes.
+                </span>
+            </div>
         </section>
     
     
