@@ -15,7 +15,10 @@
             --cor05: #000e52;
             --cor06: #2A2829;
 
-            --fonte-padrão: 
+            --fonte-padrão: syne;
+        }
+        * {
+            font-family: "syne";
         }
         h1 {
             font-size: 4em;
@@ -44,21 +47,55 @@
         .home__summary {
             display: flex;
             position: absolute;
-            text-align: center;
-            flex-wrap: wrap;
-            align-content: center;
-            justify-content: center;
-            flex-direction: column;
+            text-align: left;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-around;
             margin: auto;
-            gap: 30px;
-            top: 400px;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            gap: 18px;
+            top: 380px;
+            left: 2%;
+            max-width: 500px;
+            transform: translate(-0%, -50%);
+        }
+        .home__summary .summary__title {
+            text-align: left;
+            font-size: 140%;
+        }
+        .home__summary .summary__subtitle {
+            font-size: small;
+            padding-top: 5px;
+            max-width: 350px;
+        }
+        .summary__subtitle, .summary__title > h1, .summary__title > h2  {
+            color: var(--cor01); 
+        }
+        .summary__title > h2  {
+            font-size: medium;
+            padding-top: -5px;
+        }
+        .home__summary .summary__title > h2, .summary__subtitle {
+            margin-left: 10px;
+            display: flex;
+        }
+        .home .home__summary .main-text {
+            margin-left: 10%;
+        }
+        .home .home__summary .foto_robo {
+            display: flex;
+            justify-content: flex-end;
+            margin-left: 60%;
+            margin-top: -20px;
+        }
+        .home .home__summary .foto_robo > img {
+            width: 500px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
         }
         .home .home__img3 {
             display: flex;
             width: 100%;
-            height: 120vh;
+            height: 110vh;
             position: relative;
             background-image: url(images/layout_img/capa_page001.webp);
             background-size: cover;
@@ -67,45 +104,50 @@
         .transition-section {
             display: flex;
             position: absolute;
-            top: 87vh;
+            top: 77vh;
             width: 100%;
             height: 500px; /* Altura da transição */
             background: linear-gradient(to bottom, transparent, black 50%, rgba(0, 0, 0, 0.025) 97%, transparent); /* Gradiente branco */
         }
-        .home__summary .summary__paragraph {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2em;
-            max-width: 800px;
-            height: auto;
+        .arrow-to-bottom  {
+            background-color: transparent;
+            border: transparent;
             margin: auto;
+            margin-top: 80px;
+            transition: transform 0.3s ease;
+        } 
+        .arrow-to-bottom > a > img {
+            width: 130%;
+            height: 130%;
         }
-        .home__summary .summary__paragraph,.summary__title {
-            color: var(--cor01);
+        .arrow-to-bottom:hover {
+            transform: translatey(10px);
         }
+
         /*--------------------------------------Galeria--------------------------------------*/
+        .galery {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin: 300px;
+            margin-bottom: 60px;
+        }
         .galery .image-container1 {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            margin-top: 60px;
             gap: 20px;
             padding: 8px;
-        }
-        .galery {
-            display: flex;
-            position: relative;
-            margin: 300px;
         }
         .galery .image-container1 img {
             height: 300px;
             width: 400px;
             object-fit: cover;
             border-radius: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.297);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.308);
         }
-
     </style>
 </head>
 <body>
@@ -116,7 +158,7 @@
                     <ul class="nav__list">
                         <li><a class="link" href="index.html#aboutme" target="_self">Quem sou eu</a></li>
                         <li><a class="link" href="index.html#projetos" target="_self">Meus Projetos</a></li>
-                        <li><a class="link" href="index.html#contatos" target="_self">Contato</a></li>
+                        <li><a class="link" href="page001.html#contatos" target="_self">Contato</a></li>
                     </ul>
                     <!--<p><a href="index.html#aboutme" target="_self">Quem sou eu</a></p>
                     <p><a href="index.html#contatos" target="_self">Contato</a></p>-->
@@ -129,11 +171,11 @@
                         <li><a class="link" href="index.html#aboutme" target="_self">Sobre mim</a></li>
                         <li><a class="link" href="index.html#projetos" target="_self">Projetos</a></li>
                         <li><a class="link" href="index.html#trajectory" target="_self">Trajetória</a></li>
-                        <li><a class="link" href="index.html#contatos" target="_self">Contato</a></li>
+                        <li><a class="link" href="page001.html#contatos" target="_self">Contato</a></li>
                     </ul>
                     </a>
                 </nav>
-                <div class="centro"><a href="index.html#cabecalho" target="_self" rel="header">DIOGO SANTOS | TÉCNICO EM AUTOMAÇÃO INDUSTRIAL</a></div>
+                <div class="centro"><a href="page001.html#cabecalho" target="_self" rel="header">DIOGO SANTOS | TÉCNICO EM AUTOMAÇÃO INDUSTRIAL</a></div>
             </div>
         </header>
     <main>   
@@ -141,20 +183,36 @@
             <div class="home__img3">
                 <div class="overlay"></div>
             </div>
-            <div class="transition-section"></div>
+            <div class="transition-section">                    
+                <button class="arrow-to-bottom"><a href="page001.html#galeria"><img src="images\icones\setas-para-cima (1).png" alt=""></a></button>
+            </div>
             <div class="home__summary">
-                <h1 class="summary__title">
-                    Cora (Competição de Robôs Autônomos)
-                </h1>
-                <span class="summary__paragraph">
-                    A Cora foi uma competição realizada em um dos prédios da Engenharia na UFMG, a qual tinha o objetivo de reunir equipes da UFMG e outras escolas de MG para realizar projetos de robôs seguidores de linha. O torneio foi organizado pelo Programa de Educação Tutorial da Engenharia Elétrica (PETEE), possibilitando aos participantes uma ampla aprendizagem em diversos conteúdos relacionados à base de conhecimentos de robótica, como métodos de controle de sensores, processamentos de sinais elétricos, escolha e utilização de motores de acordo com suas aplicações, conhecimentos em linguagens de programação, desenvolvimentos de placas e componentes de circuitos elétricos, entre várias outros métodos e meios necessários para construção de robôs seguidores de linha eficientes.
-                </span>
+                <div class="main-text">
+                    <div class="summary__title">
+                        <h1>
+                            COLTEC
+                        </h1>
+                        <h2>Colégio Técnico da UFMG</h2>
+                    </div>
+                    <span class="summary__subtitle">Trabalhos e projetos realizados durante a minha trajetória acadêmica no ensino técnico da Universidade Federal de Minas Gerais</span>
+                </div>
+                <div class="foto_robo">
+                    <img src="coltec-imagens/Cora/foto-robô.jpg" alt="">
+                </div>
             </div>
         </section>
     
     
-        <section class="galery">
-            <div class="image-container1">
+        <section class="galery" id="galeria">
+            <div class="summary">
+                <h1 class="title">
+                    Cora (Competição de Robôs Autônomos)
+                </h1>
+                <span class="paragraph">
+                    A Cora foi uma competição realizada em um dos prédios da Engenharia na UFMG, a qual tinha o objetivo de reunir equipes da UFMG e outras escolas de MG para realizar projetos de robôs seguidores de linha. O torneio foi organizado pelo Programa de Educação Tutorial da Engenharia Elétrica (PETEE), possibilitando aos participantes uma ampla aprendizagem em diversos conteúdos relacionados à base de conhecimentos de robótica, como métodos de controle de sensores, processamentos de sinais elétricos, escolha e utilização de motores de acordo com suas aplicações, conhecimentos em linguagens de programação, desenvolvimentos de placas e componentes de circuitos elétricos, entre várias outros métodos e meios necessários para construção de robôs seguidores de linha eficientes.
+                </span>
+            </div>
+            <div class="image-container1">          
                 <img src="coltec-imagens/Cora/20230919_143438 (2).jpg"alt="">
                 <img src="coltec-imagens/Cora/20230919_143638.jpg"alt="">
                 <img src="coltec-imagens/Cora/IMG-20230306-WA0004 (2).jpg"alt="">
@@ -174,9 +232,31 @@
                 <img src="coltec-imagens/Cora/300/20230601_171209.jpg" alt="">
                 <img src="coltec-imagens/Cora/300/20230622_135159.jpg" alt="">
                 <img src="coltec-imagens/Cora/300/20230918_131850.jpg" alt="">
+                <a href="https://www.flaticon.com/br/icones-gratis/setas" title="setas ícones">Setas ícones criados por Graphix Dxinerz - Flaticon</a>
             </div>
         </section>
     </main>
+
+    <footer id="contatos">
+        <div class="title"><h2><a href="index.html#cabecalho" target="_self">DIOGO SANTOS</a></h2></div>
+        <div class="contacts"><h3>Como falar comigo</h3>
+            <p>
+                <li><a href="https://www.linkedin.com/in/diogo-santos-b58536260/" target="_blank" rel="external">Linkedin</a></li>
+                <li><a href="https://www.instagram.com/diogo.gss/" target="_blank" rel="external">Instagram</a></li>
+                <li><a href="https://br.pinterest.com/DogoGSS/" target="_blank" rel="external">Pinterest</a></li>
+                <li><a href="https://x.com/DogoGSS" target="_blank" rel="external">X</a></li>
+            </p>
+        </div>
+        <div class="explorer">
+            <h3>Explorar</h3>
+            <p>
+                <li><a href="index.html#cabecalho" target="_self" rel="">Início</a></li>
+                <li><a href="index.html#aboutme" target="_self" rel="">Sobre mim</a></li>
+                <li><a href="index.html#projetos" target="_self" rel="">Projetos</a></li>
+                <li><a href="index.html#trajectory" target="_self" rel="">Trajetoria</a></li>
+            </p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
