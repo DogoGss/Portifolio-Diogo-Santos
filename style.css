@@ -420,12 +420,31 @@ a.link:hover::after {
         font-size: 1.2em;
         margin: 0px 0px 20px 20px;
     }
-
+    .curriculo > a {
+        font-size: 1.2em;
+    }
     #aboutme .aboutme__text> h2 {
         margin: 80px 0px 40px 10px;  
     }
 }
 
+.curriculo {
+    border: none;
+    background-color: transparent;
+    margin-left: 40px;
+    margin-top: -5px;
+    padding-left: 2px;
+}
+.curriculo > a {
+    font-size: 1.3em;
+    transition: font-size 0.5s ease;
+}
+.curriculo > a > i {
+    padding-left: 6px;
+}
+.curriculo > a:hover {
+    text-decoration: underline;
+}
 @media (max-width: 1140px) {
     #aboutme {
         margin-top: -10px;
@@ -441,6 +460,9 @@ a.link:hover::after {
         font-size: 1.1em;
         padding: 0px 15px 10px 15px;
         margin: 0px 15px 10px 15px;
+    }
+    .curriculo > a {
+        font-size: 1.1em;
     }
     #aboutme .aboutme__text> h2 {
         margin: 50px 0px 40px 10px;  
